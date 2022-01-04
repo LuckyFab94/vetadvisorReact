@@ -1,0 +1,39 @@
+@import '../../../style/Variables.scss';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: $whiteColor;
+
+    div {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    p {
+        margin-left: 30px;
+    }
+
+    a {
+        margin-left: auto;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: #00a8d5;
+            box-shadow: 0 0 11px 10px #00a8d5;
+            border-radius: 0.5em;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+body{
+    background-color: blue;
+}
