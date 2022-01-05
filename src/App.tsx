@@ -5,14 +5,19 @@ import Header from './components/organisms/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Home from './components/pages/Home/Home';
+import SignUp from './components/pages/Signup/SignUp';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<PrivateRoute />} >
+          <Route path='/' element={<Home/>} />
+        </Route>
         <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
     </>
   );

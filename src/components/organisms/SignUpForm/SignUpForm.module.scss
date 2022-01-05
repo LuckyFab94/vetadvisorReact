@@ -1,0 +1,35 @@
+.wrapperSignUp {
+    margin: 10px;
+    flex: 1 1 auto;
+    background-color: white;
+    border-radius: 0.3em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    background-image: linear-gradient(#e66465, #9198e5);
+    min-height: 50vh;
+    min-width: 50vw;
+    border-radius: 0.3em;
+    display: flex;
+}
+
+.formGroup {
+    margin-top: 20px;
+
+    label {
+        font-size: 12px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input {
+        width: -webkit-fill-available;
+    }
+}
+
+.buttonSubmit {
+    margin-top: auto;
+}

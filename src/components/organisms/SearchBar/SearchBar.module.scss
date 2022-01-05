@@ -1,0 +1,21 @@
+@import '../../../style/Variables.scss';
+@import '../../../style/style.scss';
+
+.headerHome2 {
+    @include d-flex-align-center();
+    background-color: rgb(90, 137, 224);
+
+    input:first-of-type {
+        border-top-left-radius: 0.3em;
+        border-bottom-left-radius: 0.3em;
+    }
+}
+
+.buttonSearch {
+    margin-left: auto;
+    border-radius: unset;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    background-color: black;
+    color: $whiteColor;
+}
