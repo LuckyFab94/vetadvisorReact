@@ -1,10 +1,10 @@
 import React from 'react'
 import styleButton from './Button.module.scss'
 
-const Button = () => {
+const Button = ({className, text, onClick}: any) => {
     return (
-        <button>
-            Bottone
+        <button className={`${styleButton.button} ${className}`} onClick={onClick}>
+            {text ?? 'Bottone'}
         </button>
     )
 }

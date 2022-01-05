@@ -1,0 +1,63 @@
+@import '../../../style/Variables.scss';
+
+@mixin d-flex-align-center {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.headerHome1 {
+    @include d-flex-align-center();
+    padding: 20px;
+    background-color: rgb(44, 114, 243);
+
+    a {
+        color: $whiteColor;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+}
+
+.headerHome2 {
+    @include d-flex-align-center();
+    background-color: rgb(90, 137, 224);
+
+    input:first-of-type {
+        border-top-left-radius: 0.3em;
+        border-bottom-left-radius: 0.3em;
+    }
+}
+
+.inputHome {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: unset;
+    padding: unset;
+    padding-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.inputReadOnly {
+    border: unset;
+    border-radius: unset;
+    padding-right: unset;
+}
+
+.buttonSearch {
+    margin-left: auto;
+    border-radius: unset;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    background-color: black;
+    color: $whiteColor;
+}
+
+.imageContent {
+    background-image: url('https://static.ohga.it/wp-content/uploads/sites/24/2020/12/iStock-1205349169.jpg');
+    background-size: cover;
+    flex: 1 1 auto;
+}

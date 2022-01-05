@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../../logo.png'
 
 const Logo = () => {
     return (
-        <img src={logo} />
+        <Link to={'/'}>
+            <img src={logo} />
+        </Link>
     )
 }
 

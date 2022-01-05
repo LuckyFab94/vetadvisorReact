@@ -9,7 +9,7 @@ const Header = () => {
             <div>
                 <Logo />
                 <p>Consulta le esperienze vetirinarie e scegli le migliori cure per il tuo pet.</p>
-                <Link to={`login`}>Accedi</Link>
+                <Link className={styleHeader.loginButton} to={`login`}>Accedi</Link>
             </div>
         </nav>
     )

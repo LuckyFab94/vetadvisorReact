@@ -1,0 +1,9 @@
+.input {
+    border-radius: 0.2em;
+    border: unset;
+    padding: 10px;
+
+    &:focus-visible {
+        outline: unset;
+    }
+}
