@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vetadvisor/static/css/main.15bc8980.css",
+    "main.js": "/vetadvisor/static/js/main.27992279.js",
+    "static/js/787.59546220.chunk.js": "/vetadvisor/static/js/787.59546220.chunk.js",
+    "index.html": "/vetadvisor/index.html",
+    "main.15bc8980.css.map": "/vetadvisor/static/css/main.15bc8980.css.map",
+    "main.27992279.js.map": "/vetadvisor/static/js/main.27992279.js.map",
+    "787.59546220.chunk.js.map": "/vetadvisor/static/js/787.59546220.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15bc8980.css",
+    "static/js/main.27992279.js"
+  ]
+}
