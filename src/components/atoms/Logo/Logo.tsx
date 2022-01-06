@@ -4,7 +4,7 @@ import logo from '../../../logo.png'
 
 const Logo = () => {
     return (
-        <Link to={'/'}>
+        <Link to={'/vetadvisorReact'}>
             <img src={logo} />
         </Link>
     )

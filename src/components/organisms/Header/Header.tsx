@@ -14,10 +14,10 @@ const Header = () => {
                 <p>Consulta le esperienze vetirinarie e scegli le migliori cure per il tuo pet.</p>
                 {auth?.currentUser !== undefined &&  auth?.currentUser !== null? 
                 (
-                    <Link className={styleHeader.loginButton} to={`login`} onClick={auth.logout}>Esci</Link>
+                    <Link className={styleHeader.loginButton} to={`vetadvisorReact/login`} onClick={auth.logout}>Esci</Link>
                 ):
                 (
-                    <Link className={styleHeader.loginButton} to={`login`}>Accedi</Link>
+                    <Link className={styleHeader.loginButton} to={`vetadvisorReact/login`}>Accedi</Link>
                 )
                 }
             </div>

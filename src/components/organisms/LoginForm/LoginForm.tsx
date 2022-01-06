@@ -37,7 +37,7 @@ const LoginForm = () => {
                     <TextInput type={'password'} name='password' id='password' value={formData.password} onChange={(e: any)=>setFormData({...formData, password: e.target.value})}/>
                 </div>
                 <Button className={styleLoginForm.buttonSubmit} type={'submit'} text={'LOGIN'} />
-                <p>Non hai un account? <Link to={'/signup'}>Registrati</Link></p>
+                <p>Non hai un account? <Link to={'/vetadvisorReact/signup'}>Registrati</Link></p>
             </div>
         </form>
     )

@@ -12,8 +12,8 @@ const Home = () => {
     return (
         <>
             <div className={`${styleHome.headerHome1}`}>
-                <Link to={'/addVeterinario'}>Inserisci Veterinario</Link>
-                <Link to={'/forum'}>Forum</Link>
+                <Link to={'/vetadvisorReact/addVeterinario'}>Inserisci Veterinario</Link>
+                <Link to={'/vetadvisorReact/forum'}>Forum</Link>
             </div>
             <SearchBar />
             <div className={styleHome.imageContent} />
