@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/vetadvisorReact/static/css/main.15bc8980.css",
-    "main.js": "/vetadvisorReact/static/js/main.9806683e.js",
+    "main.js": "/vetadvisorReact/static/js/main.72efd83c.js",
     "static/js/787.59546220.chunk.js": "/vetadvisorReact/static/js/787.59546220.chunk.js",
     "index.html": "/vetadvisorReact/index.html",
     "main.15bc8980.css.map": "/vetadvisorReact/static/css/main.15bc8980.css.map",
-    "main.9806683e.js.map": "/vetadvisorReact/static/js/main.9806683e.js.map",
+    "main.72efd83c.js.map": "/vetadvisorReact/static/js/main.72efd83c.js.map",
     "787.59546220.chunk.js.map": "/vetadvisorReact/static/js/787.59546220.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15bc8980.css",
-    "static/js/main.9806683e.js"
+    "static/js/main.72efd83c.js"
   ]
 }
