@@ -9,6 +9,7 @@ import SignUp from './components/pages/Signup/SignUp';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddVeterinario from './components/pages/AddVeterinario/AddVeterinario';
 import Forum from './components/pages/Forum/Forum';
+import Profile from './components/pages/Profile/Profile';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/vetadvisorReact/forum' element={<Forum />} />
         <Route path='/vetadvisorReact/login' element={<Login />} />
         <Route path='/vetadvisorReact/signup' element={<SignUp />} />
+        <Route path='/vetadvisorReact/profile' element={<Profile />} />
       </Routes>
     </>
   );
