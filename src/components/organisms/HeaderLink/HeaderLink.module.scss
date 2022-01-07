@@ -1,0 +1,15 @@
+@import '../../../style/Variables.scss';
+@import '../../../style/style.scss';
+
+.headerHome1 {
+    @include d-flex-align-center();
+    padding: 20px;
+    background-color: rgb(44, 114, 243);
+
+    a {
+        color: $whiteColor;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+}

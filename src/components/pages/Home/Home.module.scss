@@ -1,19 +1,6 @@
 @import '../../../style/Variables.scss';
 @import '../../../style/style.scss';
 
-.headerHome1 {
-    @include d-flex-align-center();
-    padding: 20px;
-    background-color: rgb(44, 114, 243);
-
-    a {
-        color: $whiteColor;
-        text-decoration: none;
-        font-weight: bold;
-        margin-right: 20px;
-    }
-}
-
 .imageContent {
     background-image: url('https://static.ohga.it/wp-content/uploads/sites/24/2020/12/iStock-1205349169.jpg');
     background-size: cover;

@@ -7,15 +7,17 @@ import Login from './components/pages/Login/Login';
 import Home from './components/pages/Home/Home';
 import SignUp from './components/pages/Signup/SignUp';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import AddVeterinario from './components/pages/AddVeterinario/AddVeterinario';
+import Forum from './components/pages/Forum/Forum';
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path='/vetadvisorReact' element={<PrivateRoute />} >
-          <Route path='/vetadvisorReact' element={<Home/>} />
-        </Route>
+        <Route path='/vetadvisorReact' element={<Home />} />
+        <Route path='/vetadvisorReact/addVeterinario' element={<AddVeterinario />} />
+        <Route path='/vetadvisorReact/forum' element={<Forum />} />
         <Route path='/vetadvisorReact/login' element={<Login />} />
         <Route path='/vetadvisorReact/signup' element={<SignUp />} />
       </Routes>

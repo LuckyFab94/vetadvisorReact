@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Button from '../../atoms/Button/Button'
 import TextInput from '../../atoms/TextInput/TextInput'
 import Input from '../../molecules/Input/Input'
+import HeaderLink from '../../organisms/HeaderLink/HeaderLink'
 import SearchBar from '../../organisms/SearchBar/SearchBar'
 import styleHome from './Home.module.scss'
 
@@ -11,10 +12,7 @@ const Home = () => {
     const [localita, setlocalita] = useState('')
     return (
         <>
-            <div className={`${styleHome.headerHome1}`}>
-                <Link to={'/vetadvisorReact/addVeterinario'}>Inserisci Veterinario</Link>
-                <Link to={'/vetadvisorReact/forum'}>Forum</Link>
-            </div>
+            <HeaderLink />
             <SearchBar />
             <div className={styleHome.imageContent} />
         </>
