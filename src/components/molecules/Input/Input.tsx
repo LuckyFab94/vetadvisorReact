@@ -5,7 +5,7 @@ import styleInput from './Input.module.scss'
 const Input = ({label, onChangeAction, variable}:any) => {
     return (
         <>
-            <TextInput className={styleInput.inputReadOnly} readOnly={true} value={label}/>
+            <label className={styleInput.inputReadOnly}>{label}</label>
             <TextInput className={styleInput.input} value={variable} onChange={onChangeAction}/>
         </>
     )
