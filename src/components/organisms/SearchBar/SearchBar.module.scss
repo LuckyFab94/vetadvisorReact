@@ -4,13 +4,28 @@
 .headerHome2 {
     @include d-flex-align-center();
     background-color: rgb(90, 137, 224);
+    .buttonSearch {
+        margin-left: auto;
+        border-radius: unset;
+        border-radius: 0.3em;
+        background-color: black;
+        color: $whiteColor;
+        margin-top: 18px;
+    }
 }
 
-.buttonSearch {
-    margin-left: auto;
-    border-radius: unset;
-    border-top-right-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    background-color: black;
-    color: $whiteColor;
+.headerHomeNotFlex {
+    @include d-flex-align-center();
+    display: unset;
+    background-color: rgb(90, 137, 224);
+    .buttonSearch {
+        margin-left: auto;
+        border-radius: unset;
+        border-radius: 0.3em;
+        background-color: black;
+        color: $whiteColor;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
+

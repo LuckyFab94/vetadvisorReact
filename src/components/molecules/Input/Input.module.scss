@@ -1,8 +1,8 @@
 .input {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     width: 100%;
-    border-radius: unset;
+    border-radius: 0.3em;
     padding: unset;
     padding-left: 2px;
     padding-top: 10px;
@@ -14,20 +14,9 @@
 }
 
 .inputReadOnly {
-    border: unset;
-    border-radius: unset;
-    padding-right: unset;
-    background-color: white;
-    border-left: 1px solid gray;
-    min-width: 60px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 10px;
+    margin-top: 10px;
 
-    &:first-of-type {
-        border: unset;
-        border-top-left-radius: 0.3em;
-        border-bottom-left-radius: 0.3em;
-        min-width: 129px;
+    label {
+        color: white;
     }
 }
