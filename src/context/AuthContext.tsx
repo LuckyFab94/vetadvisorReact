@@ -1,7 +1,8 @@
 import { FirebaseError } from 'firebase/app'
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, User, UserCredential } from 'firebase/auth'
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile, User, UserCredential } from 'firebase/auth'
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import {auth} from '../firebase/firebase'
+import { useNavigate } from 'react-router-dom'
+import { auth } from '../firebase/firebase'
 
 interface AppContextInterface {
     currentUser: User | null;
@@ -15,13 +16,13 @@ const AuthContext = createContext<AppContextInterface | null>(null)
 
 
 export const useAuth = () =>{
-    console.log('useContext(AuthContext)')
     return useContext(AuthContext)
 }
 
 export const AuthProvider = ({children}: any) => {
 
     const [currentUser, setCurrentUser] = useState<User | null>(null)
+    const navigate = useNavigate()
 
     const signup = (email: string,password: string) => {
         return createUserWithEmailAndPassword(auth,email,password)
@@ -35,11 +36,22 @@ export const AuthProvider = ({children}: any) => {
         signOut(auth)
     }
 
+    const updateImageProfile = async (user: User,displayName: string, photoUrl: string) => {
+        await updateProfile(user,{
+            'displayName': displayName,
+            'photoURL': photoUrl
+        })
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth,(user: any) =>{
-            console.log('user')
             console.log(user)
             setCurrentUser(user)
+            if(user){
+                navigate('/vetadvisorReact')
+            }else{
+                navigate('/vetadvisorReact/login')
+            }
         })
 
         return unsubscribe
