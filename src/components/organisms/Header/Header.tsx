@@ -46,7 +46,7 @@ const Header = () => {
         <nav className={styleHeader.navbar}>
             <div className={styleHeader.div}>
                 <Logo />
-                {isDevice && <p>Consulta le esperienze vetirinarie e scegli le migliori cure per il tuo pet.</p>}
+                {isDevice && <p>Consulta le esperienze veterinarie e scegli le migliori cure per il tuo pet.</p>}
                 {auth?.currentUser !== undefined && auth?.currentUser !== null ?
                     (
                         <>
