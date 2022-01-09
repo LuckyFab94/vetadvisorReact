@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/vetadvisorReact/static/css/main.093a7c93.css",
-    "main.js": "/vetadvisorReact/static/js/main.cbf40e2d.js",
-    "static/js/787.59546220.chunk.js": "/vetadvisorReact/static/js/787.59546220.chunk.js",
-    "index.html": "/vetadvisorReact/index.html",
-    "main.093a7c93.css.map": "/vetadvisorReact/static/css/main.093a7c93.css.map",
-    "main.cbf40e2d.js.map": "/vetadvisorReact/static/js/main.cbf40e2d.js.map",
-    "787.59546220.chunk.js.map": "/vetadvisorReact/static/js/787.59546220.chunk.js.map"
+    "main.css": "/static/css/main.5fa85cb6.css",
+    "main.js": "/static/js/main.5edc6dbc.js",
+    "static/js/787.59546220.chunk.js": "/static/js/787.59546220.chunk.js",
+    "index.html": "/index.html",
+    "main.5fa85cb6.css.map": "/static/css/main.5fa85cb6.css.map",
+    "main.5edc6dbc.js.map": "/static/js/main.5edc6dbc.js.map",
+    "787.59546220.chunk.js.map": "/static/js/787.59546220.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.093a7c93.css",
-    "static/js/main.cbf40e2d.js"
+    "static/css/main.5fa85cb6.css",
+    "static/js/main.5edc6dbc.js"
   ]
 }
