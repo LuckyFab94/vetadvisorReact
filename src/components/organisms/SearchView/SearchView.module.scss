@@ -1,0 +1,18 @@
+@import '../../../style/Variables.scss';
+@import '../../../style/style.scss';
+
+.containerSearchView {
+    margin: 20px;
+    background: white;
+    border-radius: 0.3em;
+    flex: 1 1 auto;
+}
+
+.buttonEnd {
+    display: flex;
+    justify-content: end;
+
+    button {
+        cursor: pointer;
+    }
+}
