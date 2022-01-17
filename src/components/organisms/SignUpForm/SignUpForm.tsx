@@ -1,5 +1,6 @@
 import { FormControl, InputLabel } from '@mui/material'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../../../context/AuthContext'
 import { BootstrapInput } from '../../atoms/BootstrapInput/BootstrapInput'
 import Button from '../../atoms/Button/Button'
@@ -55,6 +56,7 @@ const SignUpForm = () => {
                     </FormControl>
                 </div>
                 <Button disabled={loading} className={styleSignUpForm.buttonSubmit} type={'submit'} text={'SIGNUP'} />
+                <p>Hai già un account? <Link to={'/vetadvisorReact/login'}>Accedi</Link></p>
             </div>
         </form>
     )
