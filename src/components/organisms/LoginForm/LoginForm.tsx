@@ -40,7 +40,7 @@ const LoginForm = () => {
                         <InputLabel shrink htmlFor="email">
                             Email:
                         </InputLabel>
-                        <BootstrapInput id="email" onChange={(e: any) => setFormData({ ...formData, email: e.target.value })} />
+                        <BootstrapInput id="email" type='email' onChange={(e: any) => setFormData({ ...formData, email: e.target.value })} />
                     </FormControl>
                 </div>
                 <div className={styleLoginForm.formGroup}>
@@ -48,7 +48,7 @@ const LoginForm = () => {
                         <InputLabel shrink htmlFor="password">
                             Password:
                         </InputLabel>
-                        <BootstrapInput id="password" onChange={(e: any) => setFormData({ ...formData, password: e.target.value })} />
+                        <BootstrapInput id="password" type='password' onChange={(e: any) => setFormData({ ...formData, password: e.target.value })} />
                     </FormControl>
                 </div>
                 <Button className={styleLoginForm.buttonSubmit} type={'submit'} text={'LOGIN'} />

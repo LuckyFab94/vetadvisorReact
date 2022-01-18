@@ -36,7 +36,7 @@ const SignUpForm = () => {
                         <InputLabel shrink htmlFor="email">
                             Email:
                         </InputLabel>
-                        <BootstrapInput id="email" onChange={(e: any) => setFormData({ ...formData, email: e.target.value })} />
+                        <BootstrapInput id="email" type='email' onChange={(e: any) => setFormData({ ...formData, email: e.target.value })} />
                     </FormControl>
                 </div>
                 <div className={styleSignUpForm.formGroup}>
@@ -44,7 +44,7 @@ const SignUpForm = () => {
                         <InputLabel shrink htmlFor="password">
                             Password:
                         </InputLabel>
-                        <BootstrapInput id="password" onChange={(e: any) => setFormData({ ...formData, password: e.target.value })} />
+                        <BootstrapInput id="password" type='password' onChange={(e: any) => setFormData({ ...formData, password: e.target.value })} />
                     </FormControl>
                 </div>
                 <div className={styleSignUpForm.formGroup}>
@@ -52,7 +52,7 @@ const SignUpForm = () => {
                         <InputLabel shrink htmlFor="confirmpassword">
                             Confirma Password:
                         </InputLabel>
-                        <BootstrapInput id="confirmpassword" onChange={(e: any) => setFormData({ ...formData, confirmPassword: e.target.value })} />
+                        <BootstrapInput id="confirmpassword" type='password' onChange={(e: any) => setFormData({ ...formData, confirmPassword: e.target.value })} />
                     </FormControl>
                 </div>
                 <Button disabled={loading} className={styleSignUpForm.buttonSubmit} type={'submit'} text={'SIGNUP'} />
