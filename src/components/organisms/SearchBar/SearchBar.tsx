@@ -9,7 +9,7 @@ const SearchBar = () => {
     const [nome, setNome] = useState('')
     const [localita, setlocalita] = useState('')
     const isNotDevice = useMediaQuery({
-        query: "(min-width: 380px)"
+        query: "(min-width: 600px)"
     });
     return (
         <>
