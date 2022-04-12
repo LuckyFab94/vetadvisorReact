@@ -8,7 +8,7 @@ import TextInput from '../../atoms/TextInput/TextInput'
 import styleSignUpForm from './SignUpForm.module.scss'
 
 const SignUpForm = () => {
-    const [formData, setFormData] = useState({ email: '', password: '', confirmPassword: '' })
+    const [formData, setFormData] = useState({ email: '', password: '', confirmPassword: '', name: '', surname: '' })
     const auth = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
@@ -19,9 +19,9 @@ const SignUpForm = () => {
             return setError('le password non sono uguali')
         }
         try {
-            await auth?.signup(formData.email, formData.password)
+            await auth?.signup(formData.email, formData.password, formData.name, formData.surname)
         } catch (e: any) {
-            setError(e.code)
+            setError(e.response.data)
         }
     }
 
@@ -30,7 +30,23 @@ const SignUpForm = () => {
             <div className={styleSignUpForm.wrapperSignUp}>
                 <h2>SignUp</h2>
                 {auth?.currentUser?.email}
-                {error !== '' && <p>{error}</p>}
+                {error !== '' && <p className={styleSignUpForm.error}>{error}</p>}
+                <div className={styleSignUpForm.formGroup}>
+                    <FormControl style={{ display: 'flex' }} variant="standard">
+                        <InputLabel shrink htmlFor="name">
+                            Name:
+                        </InputLabel>
+                        <BootstrapInput id="name" type='text' onChange={(e: any) => setFormData({ ...formData, name: e.target.value })} />
+                    </FormControl>
+                </div>
+                <div className={styleSignUpForm.formGroup}>
+                    <FormControl style={{ display: 'flex' }} variant="standard">
+                        <InputLabel shrink htmlFor="surname">
+                            Surname:
+                        </InputLabel>
+                        <BootstrapInput id="surname" type='text' onChange={(e: any) => setFormData({ ...formData, surname: e.target.value })} />
+                    </FormControl>
+                </div>
                 <div className={styleSignUpForm.formGroup}>
                     <FormControl style={{ display: 'flex' }} variant="standard">
                         <InputLabel shrink htmlFor="email">

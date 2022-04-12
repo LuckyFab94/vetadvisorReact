@@ -28,6 +28,12 @@
     display: flex;
 }
 
+.error {
+    background-color: red;
+    padding: 1rem;
+    border-radius: 0.3em;
+}
+
 .formGroup {
     margin-top: 20px;
 

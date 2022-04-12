@@ -8,6 +8,12 @@
     flex-direction: column;
 }
 
+.error {
+    background-color: red;
+    padding: 1rem;
+    border-radius: 0.3em;
+}
+
 @media (min-width: 1400px) {
     .form {
         min-width: 700px !important;

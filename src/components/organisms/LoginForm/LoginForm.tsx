@@ -15,7 +15,7 @@ const LoginForm = () => {
         try {
             await auth?.login(formData.email, formData.password)
         } catch (e: any) {
-            setError(e.code)
+            setError(e.response.data)
         }
     }
 
@@ -26,7 +26,7 @@ const LoginForm = () => {
             <div className={styleLoginForm.wrapperLogin}>
                 <h2>Login</h2>
                 {auth?.currentUser?.email}
-                {error !== '' && <p>{error}</p>}
+                {error !== '' && <p className={styleLoginForm.error}>{error}</p>}
                 <div className={styleLoginForm.formGroup}>
                     <FormControl style={{ display: 'flex' }} variant="standard">
                         <InputLabel shrink htmlFor="nome">
