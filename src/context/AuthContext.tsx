@@ -1,7 +1,7 @@
 import { FirebaseError } from 'firebase/app'
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile, User, UserCredential } from 'firebase/auth'
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { auth } from '../firebase/firebase'
 import axios from 'axios'
 
@@ -22,6 +22,9 @@ export const useAuth = () =>{
 
 export const AuthProvider = ({children}: any) => {
 
+    const location = useLocation()
+    console.log(location)
+
     let localUser = localStorage.getItem('user')
     if(localUser !== null && localUser !== ''){
         localUser = JSON.parse(localUser)
@@ -41,17 +44,19 @@ export const AuthProvider = ({children}: any) => {
         }).then((resp)=>{
             setCurrentUser(resp.data[0])
             localStorage.setItem('user', JSON.stringify(resp.data[0]))
+            navigate('/vetAdvisorReact')
         })
     }
 
     const login = (email: string,password: string) => {
         /* return signInWithEmailAndPassword(auth,email,password) */
-        return axios.post('http://192.168.131.11:3001/login',{
+        return axios.post('http://localhost:3001/login',{
             email: email,
             password: password
         }).then((resp)=>{
-            setCurrentUser(resp.data[0])
             localStorage.setItem('user', JSON.stringify(resp.data[0]))
+            navigate('/vetAdvisorReact')
+            setCurrentUser(resp.data[0])
         })
     }
 
@@ -60,9 +65,9 @@ export const AuthProvider = ({children}: any) => {
         localStorage.setItem('user', '')
     }
 
-    const checkToken = () => {
+    const checkToken = async () => {
         console.log(currentUser)
-        return axios.post('http://192.168.131.11:3001/welcome',{
+        return await axios.post('http://localhost:3001/welcome',{
             token: currentUser?.token
         })
     }
@@ -86,11 +91,12 @@ export const AuthProvider = ({children}: any) => {
         })
 
         return unsubscribe */
+        console.log(location.pathname)
         checkToken().then((resp)=>{
             if(resp.status !== 200){
                 navigate('/vetadvisorReact/login')
             }else {
-                navigate('/vetadvisorReact')
+                navigate(location.pathname)
             }
         }).catch((err)=>{
             navigate('/vetadvisorReact/login')

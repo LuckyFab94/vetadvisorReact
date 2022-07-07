@@ -1,0 +1,15 @@
+.dog {
+    animation: dog-walk infinite 15s  linear;
+    position: relative;
+    bottom: -15px;
+    width: fit-content;
+}
+
+@keyframes dog-walk {
+    from {
+      transform: translateX(-10vw);
+    }
+    to {
+      transform: translateX(100vw);
+    }
+  }
